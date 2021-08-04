@@ -1,9 +1,0 @@
-{
-  "name": "redux",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "devDependencies": {
-    "redux": "^4.1.0"
-  }
-}
