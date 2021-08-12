@@ -1,8 +1,6 @@
 const initialState = {
-  filters: {
     status: 'All',
     colors: [],
-  },
 }
 
 export default function appReducer(state = initialState, action) {
@@ -10,10 +8,8 @@ export default function appReducer(state = initialState, action) {
     case 'filters/statusFilterChanged': {
       return {
         ...state,
-        filters: {
           ...state.filters,
           status: action.payload
-        }
       }
     }
     default:
