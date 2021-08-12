@@ -1,22 +1,11 @@
-const initialState = {
-  filters: {
-    status: 'All',
-    colors: [],
-  },
-}
+import { combineReducers } from 'redux'
 
-export default function appReducer(state = initialState, action) {
-  switch (action.type) {
-    case 'filters/statusFilterChanged': {
-      return {
-        ...state,
-        filters: {
-          ...state.filters,
-          status: action.payload
-        }
-      }
-    }
-    default:
-      return state
-  }
-}
+import todosReducer from './features/todos/todosSlice'
+import filtersReducer from './features/filters/filterSlice'
+
+const rootReducer = combineReducers({
+  todos: todosReducer,
+  filters: filtersReducer,
+})
+
+export default rootReducer
