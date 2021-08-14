@@ -1,0 +1,17 @@
+{
+  "name": "dynamic-programming",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "fib": "nodemon fibonacci.js",
+    "a": "nodemon index.js",
+    "b": "nodemon index.js",
+    "c": "nodemon index.js"
+  },
+  "dependencies": {}
+}
