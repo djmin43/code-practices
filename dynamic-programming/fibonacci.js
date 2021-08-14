@@ -16,3 +16,14 @@ console.log(fib(6))  // 8
 console.log(fib(9)); // 34
 
 // The problem of the recursive function is if the number is too large, the calculation takes long time.
+
+// memoization
+//  js object, keys will be arg to fn, value will be return value
+
+const fibMemo = (n, memo = {}) => {
+  if (n in memo) return memo[n];
+  if (n <= 2) return 1;
+  memo[n] = fib(n - 1, memo) + fib(n - 2, memo);
+  return memo[n];
+}
+console.log(fibMemo(50))
