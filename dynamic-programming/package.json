@@ -9,7 +9,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "fib": "nodemon fibonacci.js",
-    "a": "nodemon index.js",
+    "grid": "nodemon gridTravelerMemo.js",
     "b": "nodemon index.js",
     "c": "nodemon index.js"
   },

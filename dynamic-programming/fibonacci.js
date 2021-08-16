@@ -12,7 +12,27 @@ const fib = (n) => {
   return fib(n -1) + fib(n-2);
 }
 
-console.log(fib(6))  // 8
-console.log(fib(9)); // 34
+// console.log(fib(6))  // 8
+// console.log(fib(9)); // 34
 
 // The problem of the recursive function is if the number is too large, the calculation takes long time.
+
+// memoization
+//  js object, keys will be arg to fn, value will be return value
+
+const fibMemo = (n, memo = {}) => {
+  if (n in memo) return memo[n];
+  if (n <= 2) return 1;
+  memo[n] = fib(n - 1, memo) + fib(n - 2, memo);
+  return memo[n];
+}
+
+// practice
+
+const squareRoot = (n) => {
+  console.log(n)
+  if (n * n === 1) return 1;
+  return n + squareRoot (n  - 1);
+}
+
+console.log(squareRoot(5))
