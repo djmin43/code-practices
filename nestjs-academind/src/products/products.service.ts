@@ -4,12 +4,16 @@ import { Product } from './product.model';
 
 @Injectable()
 export class ProductService {
-  products: Product[] = [];
+  private products: Product[] = [];
 
   insertProduct(title, description, price) {
     const prodId = new Date().toString();
     const newProduct = new Product(prodId, title, description, price);
     this.products.push(newProduct);
     return prodId;
+  }
+
+  getProducts() {
+    return [...this.products];
   }
 }
