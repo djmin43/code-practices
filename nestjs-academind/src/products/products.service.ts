@@ -10,6 +10,7 @@ export class ProductService {
     const prodId = new Date().toString();
     const newProduct = new Product(prodId, title, description, price);
     this.products.push(newProduct);
+    console.log(newProduct);
     return prodId;
   }
 
