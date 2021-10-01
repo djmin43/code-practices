@@ -10,7 +10,12 @@ export class ProductsController {
     @Body('title') prodTitle: string,
     @Body('description') prodDesc: string,
     @Body('price') prodPrice: number,
-  ): void {
-    this.productSerivce.insertProduct(prodTitle, prodDesc, prodPrice);
+  ) {
+    const generatedId = this.productSerivce.insertProduct(
+      prodTitle,
+      prodDesc,
+      prodPrice,
+    );
+    return { id: generatedId };
   }
 }
