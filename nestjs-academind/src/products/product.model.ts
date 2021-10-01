@@ -1,3 +1,5 @@
 export class Product {
-  constructor(id, title, description, price) {}
+  constructor(id, title, description, price) {
+
+  }
 }
