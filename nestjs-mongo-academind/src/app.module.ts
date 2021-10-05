@@ -7,9 +7,11 @@ import { AppService } from './app.service';
 import { ProductsModule } from './products/products.module';
 
 @Module({
-  imports: [ProductsModule, 
+  imports: [
+    ProductsModule, 
     ConfigModule.forRoot(), 
-    MongooseModule.forRoot(`mongodb+srv://jay:${process.env.DB_PASSWORD}@jaymin.jmuzg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)],
+    MongooseModule.forRoot(`mongodb+srv://jay:${process.env.DB_PASSWORD}@jaymin.jmuzg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`),
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
