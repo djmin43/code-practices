@@ -16,7 +16,7 @@ export class ProductsService {
     const newProduct = new this.productModel({
       title, 
       description: desc, 
-      price
+      price,
     });
     const result = await newProduct.save();
     console.log(result)
